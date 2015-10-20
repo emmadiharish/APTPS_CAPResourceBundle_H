@@ -1,0 +1,300 @@
+/* 
+CenturyLnk Color Codes  
+- Dark Green - #00853f
+- Bright Green - #8cc63f
+- White - #ffffff
+- Black - #000000
+*/
+body{
+	padding-top:10px;
+	padding-bottom:20px;
+}
+.hierarchy ul li, .hierarchy ol li {
+		margin-left: 1.5em;
+		padding-left: 0;
+}
+
+div[data-angular-treeview] {
+	/* prevent user selection */
+	-moz-user-select: -moz-none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+
+	/* default */
+	font-family: Tahoma;
+	font-size:13px;
+	color: #555;
+	text-decoration: none;
+}
+
+div[data-tree-model] ul {
+	margin: 0;
+	padding: 0;
+	list-style: none; 
+	border: none;
+	overflow: hidden;
+}
+
+div[data-tree-model] li {
+	position: relative;
+	padding: 0 0 0 0px;
+	line-height: 20px;
+}
+
+div[data-tree-model] li .expanded {
+	padding: 1px 10px;
+	background-image: url("/resource/1425577286000/Apttus_Config2__Image_Minus");
+	background-repeat: no-repeat;
+}
+
+div[data-tree-model] li .collapsed {
+	padding: 1px 10px;
+	background-image: url("/resource/1425577286000/Apttus_Config2__Image_Plus");
+	background-repeat: no-repeat;
+}
+
+div[data-tree-model] li .normal {
+	padding: 1px 10px;
+	background-repeat: no-repeat;
+}
+
+div[data-tree-model] li i, div[data-tree-model] li .pointer {
+	cursor: pointer;
+}
+
+div[data-tree-model] li .default {
+	cursor: default;
+}
+
+div[data-tree-model] li .selected {
+	background-color: #aaddff;
+	font-weight: bold;
+	padding: 1px 5px;
+}
+
+.alert-box {
+		color:#555;
+		border-radius:10px;
+		font-family:Tahoma,Geneva,Arial,sans-serif;font-size:11px;
+		padding:10px 10px 10px 36px;
+		margin:10px;
+}
+
+.alert-box span {
+		font-weight:bold;
+		text-transform:uppercase;
+}
+
+.error {
+		background:#ffecec no-repeat 10px 50%; /* url('images/error.png') */
+		border:1px solid #f5aca6;
+}
+.success {
+		background:#e9ffd9 no-repeat 10px 50%;/* url('images/success.png') */
+		border:1px solid #a6ca8a;
+}
+.warning {
+		background:#fff8c4 no-repeat 10px 50%;/* url('images/warning.png') */
+		border:1px solid #f2c779;
+}
+.notice {
+		background:#e3f7fc no-repeat 10px 50%;/* url('images/notice.png') */
+		border:1px solid #8ed9f6;
+}
+
+/* bootstrap style override */
+
+.modal { 
+	display: block;
+}
+
+/* Custom dialog/modal headers */
+
+.dialog-header-error { background-color: #d2322d; }
+.dialog-header-wait { background-color: #428bca; }
+.dialog-header-notify { background-color: #eeeeee; }
+.dialog-header-confirm { background-color: #333333; }
+	.dialog-header-error span, .dialog-header-error h4,
+	.dialog-header-wait span, .dialog-header-wait h4,
+	.dialog-header-confirm span, .dialog-header-confirm h4 { color: #ffffff; }
+
+/* Ease Display */
+
+.pad { padding: 25px; }
+
+.alert{
+	padding: 10px 10px 10px 36px;
+	border-radius: 10px;
+		margin-bottom: 10px;
+}
+
+.alert-danger{
+	background: #ffecec no-repeat 10px 50%;
+}
+
+/*.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus{
+		color: #FFFFFF;
+		background-color: #8CC63F;  
+}*/ 
+
+/* Styling for the ngProgress itself */
+#ngProgress {
+	margin: 0;
+	padding: 0;
+	z-index: 99998;
+	background-color: green;
+	color: green;
+	box-shadow: 0 0 10px 0; /* Inherits the font color */
+	height: 3px;
+	opacity: 0;
+
+	/* Add CSS3 styles for transition smoothing */
+	-webkit-transition: all 0.5s ease-in-out;
+	-moz-transition: all 0.5s ease-in-out;
+	-o-transition: all 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out;
+}
+
+/* Styling for the ngProgress-container */
+#ngProgress-container {
+	position: fixed;
+	margin: 0;
+	padding: 0;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 99999;
+}
+
+.navbar {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		/*overflow: hidden;*/
+}
+.navbar>li {
+		float: left;
+}
+.navbar>li>a:hover, .navbar>li>a:active {
+		background-color: #00853f;
+}
+.navbar>li>a:link, .navbar>li>a:visited {
+		display: block;
+		width: 120px;
+		font-weight: bold;
+		color: #FFFFFF;
+		background-color: #8ead1a;
+		text-align: center;
+		padding: 4px;
+		text-decoration: none;
+		text-transform: uppercase;
+}
+.col-sm-md-lg-cap{
+		padding-right: 10px;
+		padding-left: 10px;
+}
+.col-inner-cap{
+		border:1px solid #C1C6CA;
+		border-top:3px solid #C1C6CA;
+		border-radius:10px;
+		background-color:#FDFDFD;
+		padding:5px;
+}
+.row-cap{
+		margin-left:0px;
+		margin-right:0px;
+		margin-bottom:2%;
+}
+/*a{color: #8ead1a; text-decoration:none;}
+a:hover{color:#8ead1a; text-decoration:none;}
+.sf-menu>li>a:hover {
+	color: #88a919;
+}*/
+.nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover {
+		/*background-color: #8ead1a;*/
+}
+.navbar-center
+{   
+		position: absolute;
+		width: 100%;
+		left: 0;
+		text-align: center;
+		margin: auto;
+		height:100%;
+}
+.panel{
+		background-color:#FDFDFD;
+}
+.accodian-heading-cap
+{
+		font-weight: bold;
+		border-bottom: 1px solid #B1B5B9;
+}
+.navbar-cap{
+		color: #fff;
+		/*background: #8ead1a;*/
+		-webkit-box-shadow: 3px 1px 10px rgb(117, 117, 118);
+		font-size: 13px;
+		min-height: 34px;
+}
+/* separators in navbar.*/
+.navbar-nav  li:before {
+		content: " ";
+		position: relative;
+		width: 1px;
+		float: left;
+		margin: 0 10px;
+		height: 20px;
+		top: -5px;
+		background: #999;
+		margin-top: 5px !important;
+}
+.dropdown-menu-minicart
+{
+		min-width: 400px;
+		background-color:#FDFDFD;
+		color:black;
+}
+
+.dropdown-menu .sub-menu {
+		left: 100%;
+		position: absolute;
+		top: 0;
+		visibility: hidden;
+		margin-top: -1px;
+}
+
+.dropdown-menu li:hover  {
+		visibility: visible;
+}
+
+.dropdown:hover .dropdown-menu {
+		display: block;
+}
+
+.nav-pills .dropdown-menu {
+		margin-top: 0;
+}
+
+.OptionGroupsHeader{
+		color: #337ab7;
+}
+.optionGroupanchortags a{
+		text-decoration: underline;
+		cursor: pointer;
+		font-weight: bold;
+}
+.fixeddiv{
+		/*position: fixed;
+		overflow-y: auto;*/
+}
+.pgMessages{
+	padding-top: 10px;
+}
+/*The ngCloak directive is used to prevent the Angular html template from being briefly displayed by the browser in its raw (uncompiled) form while your application is loading.
+More info: https://docs.angularjs.org/api/ng/directive/ngCloak */
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+	display: none !important;
+}

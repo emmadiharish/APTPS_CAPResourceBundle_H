@@ -1,0 +1,5 @@
+<div class="row row-cap pgMessages">
+    <div class="col-md-12 col-sm-md-lg-cap">
+		<alert ng-repeat="alert in msgCtrl.messages" type="{{alert.type}}" close="msgCtrl.closeAlert($index)">{{alert.text}}</alert>
+	</div>
+</div>

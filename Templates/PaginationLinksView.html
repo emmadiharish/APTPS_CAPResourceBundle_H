@@ -1,0 +1,45 @@
+<ul class="list-inline text-center">
+    <li ng-switch="Ctrl.currentPage != 0">
+        <div ng-switch-when="true">
+            <a href="#" ng-click="Ctrl.firstPage()">
+                <img src="{{Ctrl.baseUrl}}/Images/Apttus_Config2__Image_FirstPage.png"/>
+            </a>
+        </div>
+        <div ng-switch-when="false">
+            <img src="{{Ctrl.baseUrl}}/Images/Apttus_Config2__Image_FirstPageGray.png"/>
+        </div>
+    </li>
+    <li ng-switch="Ctrl.currentPage != 0">
+        <div ng-switch-when="true">
+            <a href="#" ng-click="Ctrl.prevPage()">
+                <img src="{{Ctrl.baseUrl}}/Images/Apttus_Config2__Image_Previous.png"/>
+            </a>
+        </div>
+        <div ng-switch-when="false">
+            <img src="{{Ctrl.baseUrl}}/Images/Apttus_Config2__Image_PreviousGray.png"/>
+        </div>
+    </li>
+    <li>
+        <span>Page: {{ Ctrl.pagedItems.length > 0 ? Ctrl.currentPage + 1 : 0}} of {{ Ctrl.pagedItems.length }}</span>
+    </li>
+    <li ng-switch="Ctrl.currentPage != Ctrl.pagedItems.length - 1 && Ctrl.pagedItems.length != 0">
+        <div ng-switch-when="true">
+            <a href="#" ng-click="Ctrl.nextPage()">
+                <img src="{{Ctrl.baseUrl}}/Images/Apttus_Config2__Image_Next.png"/>
+            </a>
+        </div>
+        <div ng-switch-when="false">
+            <img src="{{Ctrl.baseUrl}}/Images/Apttus_Config2__Image_NextGray.png"/>
+        </div>
+    </li>
+    <li ng-switch="Ctrl.currentPage != Ctrl.pagedItems.length - 1 && Ctrl.pagedItems.length != 0">
+        <div ng-switch-when="true">
+            <a href="#" ng-click="Ctrl.lastPage()">
+                <img src="{{Ctrl.baseUrl}}/Images/Apttus_Config2__Image_LastPage.png"/>
+            </a>
+        </div>
+        <div ng-switch-when="false">
+            <img src="{{Ctrl.baseUrl}}/Images/Apttus_Config2__Image_LastPageGray.png"/>
+        </div>
+    </li>
+</ul>

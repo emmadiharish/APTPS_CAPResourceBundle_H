@@ -1,0 +1,12 @@
+<div class="col-md-12 col-sm-md-lg-cap" >  
+    <div class="col-inner-cap ng-cloak">
+    	<h4>Recommendations</h4>
+        <ul class="list-inline">
+            <li ng-repeat="(productId, product) in recCtrl.recommendedproductsMap">
+                <div ng-bind-html="product.Name | unsafe">
+                </div>
+                <button class="btn btn-primary btn-xs" ng-click="recCtrl.addtoCart(productId)">Add to Cart</button>
+            </li>
+        </ul>
+    </div>
+</div>

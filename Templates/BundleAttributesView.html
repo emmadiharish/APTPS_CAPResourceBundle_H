@@ -1,0 +1,18 @@
+<div class="col-md-5 col-sm-md-lg-cap" >
+    <div class="col-inner-cap ng-cloak">
+        <ul class="list-inline">
+            <li>
+                <img class="img-thumbnail" style="max-width:100px;" src="{{attrCtrl.constants.baseFileUrl + attrCtrl.baseConfig.lineItem.bundleProdIconId}}"/>
+            </li>
+            <li>
+                <a href="/{{attrCtrl.baseConfig.lineItem.bundleProdId}}" target="_blank" >{{attrCtrl.baseConfig.lineItem.bundleProdName}}</a>
+            </li>
+        </ul>
+        
+        <!-- Bundle Static/dynamic Attributes Area Start -->
+        <div id="staticattributes"> <!--constants.baseUrl/Templates/ProductAttributesView.html--> 
+		    <ng-include src="attrCtrl.constants.baseUrl+'/Templates/ProductAttributesView.html'"></ng-include>
+		</div>
+        <!-- End of Bundle static/dynamic attributes section -->
+    </div>
+</div>

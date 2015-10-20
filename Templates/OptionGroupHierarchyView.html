@@ -1,0 +1,20 @@
+<div class="col-inner-cap hierarchy">
+    <!--
+          [TREE attribute]
+          angular-treeview: the treeview directive
+          tree-id : each tree's unique id.
+          tree-model : the tree model on $scope.
+          node-id : each node's id
+          node-label : each node's label
+          node-children: each node's children
+    -->
+    <div
+        data-angular-treeview="true"
+        data-tree-id="mytree"
+        data-tree-model="ghCtrl.productGroupList"
+        data-node-id="groupId"
+        data-node-label="groupName"
+        data-node-children="children"
+        callback-fn="ghCtrl.rendercurrentproductoptiongroups(arg1,arg2,arg3)">
+    </div>
+</div>

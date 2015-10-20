@@ -1,0 +1,22 @@
+<div class="col-md-7 col-sm-md-lg-cap" ng-show="Ctrl.displayPricingMatrix">
+    <div class="col-inner-cap">    
+        <h3>Pricing Matrix</h3>
+
+        <!-- Pricing Matrix Pagination Start -->
+        <ng-include src="Ctrl.baseUrl + '/Templates/PaginationLinksView.html'"></ng-include>
+        <!-- Pricing Matrix Pagination End -->
+        
+        <!-- Pricing Matrix Table Start -->
+        <table class="table table-bordered  table-striped table-hover sticky-header">
+            <thead>
+                <th ng-repeat="dimension in Ctrl.dimensions">{{Ctrl.pavfieldDescribeMap[dimension].fieldDescribe.fieldLabel}}</th>
+            </thead>
+            <tbody>
+                <tr ng-repeat="item in Ctrl.pagedItems[Ctrl.currentPage]" class="angularPricingMtr">
+                    <td ng-repeat="dimension in Ctrl.dimensions" class="border-bottomPricing">{{item[dimension]}}</td>
+                </tr>
+            </tbody>
+        </table>
+        <!-- Pricing Matrix Table End -->
+    </div>                                
+</div>
