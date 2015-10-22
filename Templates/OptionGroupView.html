@@ -18,18 +18,10 @@
             <!-- id for heading is must for anchortags to work -->
             <accordion-group ng-repeat="optiongroup in grpCtrl.currentproductoptiongroups" is-open="true">
                 <accordion-heading>
-                    <!--<div class="accodian-heading-cap">
-                        <div id="anchor{{optiongroup.groupName}}"></div>{{optiongroup.groupName}}
-                        <div ng-show="optiongroup.isError" class="alert-box error">
-                            <span>error: </span>
-                            {{optiongroup.errorMessage}}
-                        </div>
-                    </div>-->
-                    <div id="anchor{{optiongroup.groupName}}"></div>
-                    <div ng-bind-html="optiongroup.groupName | unsafe"></div>
+                    <div id="anchor{{optiongroup.groupName}}" ng-bind-html="optiongroup.groupName | unsafe"></div>
                 </accordion-heading>
                 <table>
-                    <tr class="row" ng-repeat="pcomponent in optiongroup.productOptionComponents | filter: {isActive: true}">
+                    <tr class="row" ng-repeat="pcomponent in optiongroup.productOptionComponents | filter: {isActive: true}" ng-show="pcomponent.isAvailableonSLocation">
                         <td class="col-sm-1">
                             <div ng-show="optiongroup.ischeckbox" id="opCheckbox">
                                 <input type="checkbox" ng-change="grpCtrl.renderoptionproductattributes(pcomponent, $parent.$index)" ng-model="pcomponent.isselected" ng-disabled="pcomponent.isDisabled">
