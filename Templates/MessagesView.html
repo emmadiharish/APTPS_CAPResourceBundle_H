@@ -1,5 +1,5 @@
-<div class="row row-cap pgMessages">
+<div class="row row-cap pgMessages" ng-show="msgCtrl.hasPageMessages()">
     <div class="col-md-12 col-sm-md-lg-cap">
-		<alert ng-repeat="alert in msgCtrl.messages" type="{{alert.type}}" close="msgCtrl.closeAlert($index)">{{alert.text}}</alert>
+		<alert ng-repeat="msg in msgCtrl.messages" type="{{msg.type}}" close="msgCtrl.closeAlert($index)">{{msg.text}}</alert>
 	</div>
 </div>
