@@ -1,6 +1,5 @@
 <div class="col-md-12 col-sm-md-lg-cap" ng-show="locCtrl.displaylocations">  
     <div class="col-inner-cap ng-cloak">
-		<label for="newlocation"> Add New Location</label>
 		<a href="{{locCtrl.newserviceLocationURL}}" id="newlocation" target="_blank" class="btn btn-primary btn-xs">Add New Location</a>
 		<br/>
 		<table class="table table-bordered  table-striped table-hover">
@@ -15,7 +14,7 @@
 			<tbody>
 				<tr ng-repeat="loc in locCtrl.locItems" class="angularLocationsTable">
 					<td >
-						<input type="radio" id="{{loc.Id}}" ng-click="locCtrl.setSelectedlocation(loc)" ng-checked="loc.Id == locCtrl.selectedlpa.Id" name="palChk"  />
+						<input type="radio" id="{{loc.Id}}" ng-click="locCtrl.setSelectedlocation(loc)" ng-checked="loc.Id == locCtrl.selectedlpaId" name="palChk"  />
 					</td>
 					<td >{{loc.Name}}</td>
 					<td >{{loc.Service_Address_Line_1__c}}, {{loc.City__c}}, {{loc.State__c}}, {{loc.Country__c}}, {{loc.Zip__c}}</td>
