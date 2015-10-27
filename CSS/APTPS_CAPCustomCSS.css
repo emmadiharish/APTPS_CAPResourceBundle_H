@@ -298,3 +298,356 @@ More info: https://docs.angularjs.org/api/ng/directive/ngCloak */
 [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
 	display: none !important;
 }
+
+/* ng CPQ styles for constraints */
+.error {
+    border-width: 1px;
+    border-style: solid;
+    border-right: none;
+    margin: 0;
+    padding: 0.5rem 1rem;
+}
+
+.error .error__error-header {
+    color: inherit;
+    font-size: inherit;
+    margin: 0 0 .4rem;
+    position: relative;
+    padding-left: 1.4rem;
+}
+
+.error .error__error-header:before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    left: 0;
+}
+
+.error .error__error-list {
+    color: #939193;
+    font-family: ProximaNovaSoft-Regular;
+    font-size: .9rem;
+    line-height: 1.2rem;
+}
+
+.error.error--critical, .form-element-container.form-element-container--error .multipick-item>label,
+    .form-element-container.form-element-container--error .select-override select,
+    .form-element-container.form-element-container--error .select-override:before,
+    .form-element-container.form-element-container--error>label {
+    color: #C56E66;
+}
+
+.error .error__error-list p {
+    padding: 0;
+    margin: 0;
+}
+
+p.no-wrap {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.error .error__error-list p:not(:last-child ) {
+    margin-bottom: 1rem;
+}
+
+.error.error--critical {
+    background: #F5EFED;
+    border: 1px solid #C32F22;
+    border-radius: 5px;
+    margin: .2rem 1rem .2rem 1rem;
+    color: #333333;
+}
+
+.error.error--warning {
+    background: #FFF2DC;
+    border: 1px solid #C32F22;
+    border-radius: 5px;
+    margin: .2rem 1rem .2rem 1rem;
+    color: #E29A0A;
+}
+
+.error.error--info {
+    background: white;
+    border: 1px solid #33AA33;
+    border-radius: 5px;
+    margin: .2rem 1rem .2rem 1rem;
+    color: #333333;
+}
+
+.modal-dialog, .modal-overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+
+.modal-overlay {
+    background: #334A60;
+    bottom: 0;
+    left: 0;
+    opacity: .15;
+    z-index: 30000;
+}
+
+.modal-dialog {
+    background: #FFF;
+    border-radius: .4rem;
+    bottom: 0;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    max-height: 80%;
+    min-height: 50%;
+    left: 0;
+    margin: auto;
+    min-width: 40rem;
+    width: 55%;
+    z-index: 40000;
+}
+
+.modal-header {
+    border-bottom: 1px solid #E3E3E3;
+    -webkit-box-flex: 0;
+    -webkit-flex: none;
+    -ms-flex: none;
+    flex: none;
+    padding: 1.2rem;
+    position: relative;
+}
+.modal-header .pbBody .dataCol, .modal-header h3, .pbBody .modal-header .dataCol {
+    font-size: 1.125rem;
+    margin: 0;
+}
+
+.modal-header .modal-header__close-modal {
+    color: #44596C;
+    cursor: pointer;
+    font-size: 1.1rem;
+    position: absolute;
+    right: 1.2rem;
+    top: 1.2rem;
+}
+
+.modal-content {
+    overflow-y: auto;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+
+.modal-content::-webkit-scrollbar {
+    width: 1rem;
+    height: 1.2rem;
+}
+
+.modal-content::-webkit-scrollbar-track {
+    background: #E4E6E9;
+    border: 1px solid #DEDEDE;
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+    background: padding-box content-box #B4BCC4;
+    border-radius: 1rem;
+    border: .25rem solid transparent;
+}
+
+[contentEditable], input[pikaday], input[type] {
+    padding: .2rem .25rem;
+    font-size: 1rem;
+    border-radius: 5px;
+}
+
+.modal-content::-webkit-scrollbar-corner {
+    background-color: transparent;
+    display: none;
+}
+
+.modal-content .modal-content__description {
+    border-bottom: 1px solid #E3E3E3;
+    color: #647687;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    margin: 0;
+    overflow: auto;
+    padding: 1.2rem;
+}
+
+.modal-content .modal-content__description p {
+    margin: 0;
+}
+
+.modal-content .modal-content__description p:not(:last-child ) {
+    margin-bottom: 1rem;
+}
+
+.modal-content .modal-content__description img {
+    float: left;
+    width: auto;
+    margin-right: 1.4rem;
+}
+
+.modal-content .modal-content__pagination {
+    border-bottom: 1px solid #E3E3E3;
+    padding: 1.4rem;
+}
+
+.modal-content .modal-content__option-row {
+    padding: .6rem 1.4rem;
+    margin: 0;
+    overflow: hidden;
+    border-bottom: 1px solid #E3E3E3;
+}
+
+.modal-content .modal-content__option-row .form-element-container {
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+}
+
+.modal-content .modal-content__option-row .form-element-container>label
+    {
+    margin-right: 1rem;
+}
+
+.modal-content .modal-content__modal-attributes-container {
+    padding: 1.4rem 4rem;
+}
+
+.modal-content .modal-content__modal-attributes-container .pbBody .dataCol,
+    .modal-content .modal-content__modal-attributes-container h3, .pbBody .modal-content .modal-content__modal-attributes-container .dataCol
+    {
+    font-size: 1rem;
+}
+
+.modal-content .modal-content__modal-attributes-container .modal-attributes__list
+    {
+    color: #44596C;
+    font-family: ProximaNovaSoft-Semibold;
+    list-style: none;
+    overflow: auto;
+    margin: 0;
+}
+
+.modal-content .modal-content__modal-attributes-container .modal-attributes__list li
+    {
+    width: 50%;
+    float: left;
+    padding: 0 0 1.4rem;
+}
+
+.modal-content .modal-content__modal-attributes-container .modal-attributes__label
+    {
+    padding: 0;
+}
+
+.modal-content .modal-content__modal-attributes-container .modal-attributes__definition
+    {
+    font-size: 1rem;
+    margin: 0;
+}
+
+.modal-content .modal-row__title {
+    margin-bottom: .4rem;
+}
+
+.modal-content .modal-row__subtitle {
+    color: #B4BCC4;
+    font-size: .9rem;
+}
+
+.modal-content .modal-content__label-row {
+    border-bottom: 1px solid #E3E3E3;
+    padding: 1.2rem 1.2rem 0;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.modal-content .modal-content__label-row label {
+    display: block;
+}
+
+.modal-content .modal-content__modal-col {
+    -webkit-box-flex: 0;
+    -webkit-flex: none;
+    -ms-flex: none;
+    flex: none;
+    white-space: nowrap;
+    width: 7rem;
+}
+
+.modal-content .modal-content__modal-col:first-child {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+
+.modal-content .modal-content__modal-col:last-child {
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    text-align: right;
+}
+
+.modal-content .form-element-container {
+    margin: 0;
+}
+
+.modal-content .modal-row {
+    border-bottom: 1px solid #E3E3E3;
+    padding: 1.2rem;
+    overflow: hidden;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.modal-content .modal-row .form-element-container:last-child {
+    margin-bottom: 0;
+}
+
+.modal-content .modal-row:nth-child(2n+1) {
+    background: #F0F1F2;
+}
+
+.modal-content .modal-row:last-child {
+    border-bottom: none;
+}
+
+.modal-content>:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.modal-footer {
+    border-top: 1px solid #E3E3E3;
+    -webkit-box-flex: 0;
+    -webkit-flex: none;
+    -ms-flex: none;
+    flex: none;
+    padding: 1.125rem;
+}
+
+.product-dialog .modal-footer {
+    padding: 0.2rem;
+    border-top: 0;
+}
