@@ -460,11 +460,11 @@ p.no-wrap {
     border: .25rem solid transparent;
 }
 
-[contentEditable], input[pikaday], input[type] {
+/*[contentEditable], input[pikaday], input[type] {
     padding: .2rem .25rem;
     font-size: 1rem;
     border-radius: 5px;
-}
+}*/
 
 .modal-content::-webkit-scrollbar-corner {
     background-color: transparent;
@@ -650,4 +650,144 @@ p.no-wrap {
 .product-dialog .modal-footer {
     padding: 0.2rem;
     border-top: 0;
+}
+
+.button-row {
+    white-space: nowrap
+}
+
+.button-row button {
+    margin-right: .5rem
+}
+
+.button-row {
+    -moz-box-flex: 1;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    width: 100%;
+    margin-left: 0px; 
+    z-index: 1
+}
+
+.button-row button { 
+    margin-right: 0rem;
+}
+
+.button-row span.selected-num {
+    padding: 0.4rem 0.2rem 0.4rem 0.4rem;
+    margin-right: 0rem;
+}
+
+.button-row {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    width: 100%;
+    margin-left: 6px;
+}
+
+
+.button-row {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    width: 100%
+}
+
+.button-row span.selected-num {
+    padding: 0.4rem 0.4rem 0.4rem 0rem;
+    margin-right: 0rem;
+}
+.button-row {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    width: 100%
+}
+
+.button-row span.selected-num {
+    padding: 0.4rem 0.4rem 0.4rem 0rem;
+    margin-right: 0rem;
+}
+
+.button-row {
+    padding: .6rem 1.2rem
+}
+
+button {
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: .95rem;
+    padding: .6rem 1rem;
+    background: #EEE;
+    font-weight: 400;
+    -webkit-transition: background .1s ease-in;
+    transition: background .1s ease-in
+}
+
+button.exit, button.help {
+    font-size: 1.25rem;
+    padding: .125rem .5rem
+}
+
+button.primary {
+    background: #4BC077;
+    color: #FFF
+}
+
+button.primary.active, button.primary:hover {
+    background: #379965
+}
+
+button.secondary {
+    background: #2093DA;
+    color: #FFF
+}
+
+button.secondary:active, button.secondary:hover {
+    background: #1C78B1
+}
+
+button.help {
+    color: #95CAEB;
+    background: 0 0
+}
+
+button.cancel {
+    background: #FFF;
+    border: 1px solid #BBC2C9;
+    color: #738392;
+    font-family: ProximaNovaSoft-Semibold
+}
+
+button.cancel:hover {
+    background: rgba(187, 194, 201, .1)
+}
+
+button.exit {
+    color: #95CAEB;
+    background: 0 0
+}
+
+button.tertiary {
+    background: #44596C;
+    color: #fff
+}
+
+button.tertiary.active, button.tertiary:hover {
+    background: #293F54
+}
+
+button[disabled], button[disabled]:hover {
+    background: #B4BCC4
+}
+
+button[disabled] {
+    cursor: not-allowed
 }
