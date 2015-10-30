@@ -6,7 +6,7 @@ CenturyLnk Color Codes
 - Black - #000000
 */
 body{
-	padding-top:10px;
+	padding-top:5px;
 	padding-bottom:20px;
 }
 .hierarchy ul li, .hierarchy ol li {
@@ -291,7 +291,7 @@ a:hover{color:#8ead1a; text-decoration:none;}
 		overflow-y: auto;*/
 }
 .pgMessages{
-	padding-top: 10px;
+	padding-top: 5px;
 }
 /*The ngCloak directive is used to prevent the Angular html template from being briefly displayed by the browser in its raw (uncompiled) form while your application is loading.
 More info: https://docs.angularjs.org/api/ng/directive/ngCloak */
