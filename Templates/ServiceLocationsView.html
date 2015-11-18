@@ -2,27 +2,33 @@
     <div class="col-inner-cap ng-cloak">
 		<a href="{{locCtrl.newserviceLocationURL}}" id="newlocation" target="_blank" class="btn btn-primary btn-xs">Add New Location</a>
 		<br/>
-		<table class="table table-bordered  table-striped table-hover">
-			<thead>
-				<th >Select</th>
-				<th >Loc Name</th>
-				<th >Service Address</th>
-				<th >Primary TN</th>
-				<th >SWC CLLI code</th>
-				<th >Validation Status</td>
-			</thead>
-			<tbody>
-				<tr ng-repeat="loc in locCtrl.locItems" class="angularLocationsTable">
-					<td >
-						<input type="radio" id="{{loc.Id}}" ng-click="locCtrl.setSelectedlocation(loc)" ng-checked="loc.Id == locCtrl.selectedlpaId" name="palChk"  />
-					</td>
-					<td >{{loc.Name}}</td>
-					<td >{{loc.Service_Address_Line_1__c}}, {{loc.City__c}}, {{loc.State__c}}, {{loc.Country__c}}, {{loc.Zip__c}}</td>
-					<td >{{loc.Primary_TN__c}}</td>
-					<td >{{loc.SWC_CLLI_code__c}}</td>
-					<td >{{loc.Status__c}}</td>
-				</tr>
-			</tbody>
-		</table>
+		<br/>
+		<div class="table-responsive">
+			<table class="table table-bordered  table-striped table-hover">
+				<thead>
+					<th >Select</th>
+					<th >Loc Name</th>
+					<th >Service Address</th>
+					<th >Primary TN</th>
+					<th >SWC CLLI code</th>
+					<th >Validation Status</td>
+				</thead>
+				<tbody>
+					<tr pagination-id="serviceLocationPagination" dir-paginate="loc in locCtrl.locItems | itemsPerPage:4" class="angularLocationsTable">
+						<td >
+							<input type="radio" id="{{loc.Id}}" ng-click="locCtrl.setSelectedlocation(loc)" ng-checked="loc.Id == locCtrl.selectedlpaId" name="palChk"  />
+						</td>
+						<td >{{loc.Name}}</td>
+						<td >{{loc.Service_Address_Line_1__c}}, {{loc.City__c}}, {{loc.State__c}}, {{loc.Country__c}}, {{loc.Zip__c}}</td>
+						<td >{{loc.Primary_TN__c}}</td>
+						<td >{{loc.SWC_CLLI_code__c}}</td>
+						<td >{{loc.Status__c}}</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="text-center" ng-controller="paginationControlsCtrl">
+			<dir-pagination-controls pagination-id="serviceLocationPagination" boundary-links="true"></dir-pagination-controls>
+		</div>
 	</div>
 </div>

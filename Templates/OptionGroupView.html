@@ -24,17 +24,17 @@
                     <tr class="row" ng-repeat="pcomponent in optiongroup.productOptionComponents | filter: {isActive: true}">
                         <td class="col-sm-1">
                             <div ng-show="optiongroup.ischeckbox" id="opCheckbox">
-                                <input type="checkbox" ng-change="grpCtrl.renderoptionproductattributes(pcomponent, $parent.$index)" ng-model="pcomponent.isselected" ng-disabled="pcomponent.isDisabled || !pcomponent.isAvailableonSLocation">
+                                <input type="checkbox" ng-click="grpCtrl.renderoptionproductattributes(pcomponent, optiongroup, false)" ng-checked="pcomponent.isselected" ng-disabled="pcomponent.isDisabled || !pcomponent.isAvailableonSLocation">
                                 </input>
                             </div>
                             <div ng-show="!optiongroup.ischeckbox" id="opRadio">
-                                <input ng-click="grpCtrl.renderoptionproductattributes(pcomponent, $parent.$index)" type="radio" ng-model="optiongroup.selectedproduct" ng-value="pcomponent.productId" ng-disabled="pcomponent.isDisabled || !pcomponent.isAvailableonSLocation">
+                                <input ng-click="grpCtrl.renderoptionproductattributes(pcomponent, optiongroup, false)" type="radio" ng-checked="pcomponent.isselected" ng-value="pcomponent.productId" ng-disabled="pcomponent.isDisabled || !pcomponent.isAvailableonSLocation">
                                 </input>
                             </div>
                         </td>
                         <td class="col-sm-8">
                             <div>
-                                <a href="#" title="Configure" ng-click="grpCtrl.rendercurrentproductoptiongroups(null, pcomponent, $parent.$index, true)" ng-show="pcomponent.hasOptions && pcomponent.isAvailableonSLocation">
+                                <a href="#" title="Configure" ng-click="grpCtrl.rendercurrentproductoptiongroups(null, pcomponent, optiongroup)" ng-show="pcomponent.hasOptions && pcomponent.isAvailableonSLocation">
                                     <img src="{{grpCtrl.constants.baseUrl}}/Images/Apttus_Config2_Configure_bundle.png" alt="Configure"/>
                                 </a>
                                 <a target="_blank" href="/{{pcomponent.productId}}">
@@ -49,7 +49,7 @@
                             </div>
                         </td>
                         <td class="col-sm-1">
-                            <a ng-show="pcomponent.componentId != null && pcomponent.hasAttributes && pcomponent.isDisabled != true && pcomponent.isAvailableonSLocation"" href="#" title="Configure Attributes" ng-click="grpCtrl.selectProductrenderoptionproductattributes(pcomponent, $parent.$index)">
+                            <a ng-show="pcomponent.componentId != null && pcomponent.hasAttributes && pcomponent.isDisabled != true && pcomponent.isAvailableonSLocation"" href="#" title="Configure Attributes" ng-click="grpCtrl.renderoptionproductattributes(pcomponent, optiongroup, true)">
                                 <img src="{{grpCtrl.constants.baseUrl}}/Images/Apttus_Config2_configure_attributes.png"/>
                             </a>
                         </td>

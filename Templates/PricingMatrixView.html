@@ -3,7 +3,9 @@
         <h3>Pricing Matrix</h3>
 
         <!-- Pricing Matrix Pagination Start -->
-        <ng-include src="Ctrl.baseUrl + '/Templates/PaginationLinksView.html'"></ng-include>
+        <div class="text-center" ng-controller="paginationControlsCtrl">
+            <dir-pagination-controls pagination-id="PriceMatrixPagination" boundary-links="true"></dir-pagination-controls>
+        </div>
         <!-- Pricing Matrix Pagination End -->
         
         <!-- Pricing Matrix Table Start -->
@@ -12,7 +14,7 @@
                 <th ng-repeat="dimension in Ctrl.dimensions">{{Ctrl.pavfieldDescribeMap[dimension].fieldDescribe.fieldLabel}}</th>
             </thead>
             <tbody>
-                <tr ng-repeat="item in Ctrl.pagedItems[Ctrl.currentPage]" class="angularPricingMtr">
+                <tr pagination-id="PriceMatrixPagination" dir-paginate="item in Ctrl.filteredItems | itemsPerPage:20" class="angularPricingMtr">
                     <td ng-repeat="dimension in Ctrl.dimensions" class="border-bottomPricing">{{item[dimension]}}</td>
                 </tr>
             </tbody>

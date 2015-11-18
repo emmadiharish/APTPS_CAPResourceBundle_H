@@ -13,40 +13,61 @@
                     <label class="control-label col-sm-4">
                         <div ng-bind-html="attrCtrl.pavfieldDescribeMap[optionattr.fieldName].fieldDescribe.fieldLabel | unsafe"></div>
                     </label>
+
+                    <!-- fieldType: Text -->
                     <div class="col-sm-8" ng-switch-when="text" ng-class="{'has-error': innerForm.text.$invalid}">
-                        <input class="form-control" type="text" name="text" ng-value="attrCtrl.productAttributeValues[optionattr.fieldName]" ng-model="attrCtrl.productAttributeValues[optionattr.fieldName]" ng-readonly="optionattr.isReadOnly" ng-required="attrCtrl.pavfieldDescribeMap[optionattr.fieldName].fieldDescribe.isRequired"/>
+                        <input class="form-control" type="text" name="text" ng-model="attrCtrl.productAttributeValues[optionattr.fieldName]" ng-readonly="optionattr.isReadOnly" ng-required="optionattr.isRequired"/>
                     </div>
+
+                    <!-- fieldType: Number -->
                     <div class="col-sm-8" ng-switch-when="number" ng-class="{'has-error': innerForm.number.$invalid}">    
-                        <input class="form-control" type="number" name="number" ng-value="attrCtrl.productAttributeValues[optionattr.fieldName]" ng-model="attrCtrl.productAttributeValues[optionattr.fieldName]" ng-readonly="optionattr.isReadOnly" ng-required="attrCtrl.pavfieldDescribeMap[optionattr.fieldName].fieldDescribe.isRequired"/>
+                        <input class="form-control" type="number" name="number" ng-model="attrCtrl.productAttributeValues[optionattr.fieldName]" ng-readonly="optionattr.isReadOnly" ng-required="optionattr.isRequired"/>
                     </div>
+
+                    <!-- fieldType: Checkbox -->
                     <div class="col-sm-8" ng-switch-when="checkbox" ng-class="{'has-error': innerForm.checkbox.$invalid}">
-                        <input class="form-control" type="checkbox" name="checkbox" ng-value="attrCtrl.productAttributeValues[optionattr.fieldName]" ng-model="attrCtrl.productAttributeValues[optionattr.fieldName]" ng-readonly="optionattr.isReadOnly" ng-required="attrCtrl.pavfieldDescribeMap[optionattr.fieldName].fieldDescribe.isRequired"/>
+                        <input class="form-control" type="checkbox" name="checkbox" ng-model="attrCtrl.productAttributeValues[optionattr.fieldName]" ng-readonly="optionattr.isReadOnly" ng-required="optionattr.isRequired"/>
                     </div>
+
+                    <!-- fieldType: Date -->
                     <div class="col-sm-8" ng-switch-when="date" ng-class="{'has-error': innerForm.date.$invalid}">
-                        <input class="form-control" type="date" name="date" ng-value="attrCtrl.productAttributeValues[optionattr.fieldName]" ng-model="attrCtrl.productAttributeValues[optionattr.fieldName]" ng-readonly="optionattr.isReadOnly" ng-required="attrCtrl.pavfieldDescribeMap[optionattr.fieldName].fieldDescribe.isRequired"/>
+                        <input class="form-control" type="date" name="date" ng-model="attrCtrl.productAttributeValues[optionattr.fieldName]" ng-readonly="optionattr.isReadOnly" ng-required="optionattr.isRequired"/>
                     </div>
+
+                    <!-- fieldType: Datetime -->
                     <div class="col-sm-8" ng-switch-when="datetime" ng-class="{'has-error': innerForm.datetime.$invalid}">
-                        <input class="form-control" type="datetime" name="datetime" ng-value="attrCtrl.productAttributeValues[optionattr.fieldName]" ng-model="attrCtrl.productAttributeValues[optionattr.fieldName]" ng-readonly="optionattr.isReadOnly" ng-required="attrCtrl.pavfieldDescribeMap[optionattr.fieldName].fieldDescribe.isRequired"/>
+                        <input class="form-control" type="datetime" name="datetime" ng-model="attrCtrl.productAttributeValues[optionattr.fieldName]" ng-readonly="optionattr.isReadOnly" ng-required="optionattr.isRequired"/>
                     </div>
+
+                    <!-- fieldType: time -->
                     <div class="col-sm-8" ng-switch-when="time" ng-class="{'has-error': innerForm.time.$invalid}">
-                        <input class="form-control" type="time" name="time" ng-value="attrCtrl.productAttributeValues[optionattr.fieldName]" ng-model="attrCtrl.productAttributeValues[optionattr.fieldName]" ng-readonly="optionattr.isReadOnly" ng-required="attrCtrl.pavfieldDescribeMap[optionattr.fieldName].fieldDescribe.isRequired"/>
+                        <input class="form-control" type="time" name="time" ng-model="attrCtrl.productAttributeValues[optionattr.fieldName]" ng-readonly="optionattr.isReadOnly" ng-required="optionattr.isRequired"/>
                     </div>
+
+                    <!-- fieldType: Url -->
                     <div class="col-sm-8" ng-switch-when="url" ng-class="{'has-error': innerForm.url.$invalid}">
-                        <input class="form-control" type="url" name="url" ng-value="attrCtrl.productAttributeValues[optionattr.fieldName]" ng-model="attrCtrl.productAttributeValues[optionattr.fieldName]" ng-readonly="optionattr.isReadOnly" ng-required="attrCtrl.pavfieldDescribeMap[optionattr.fieldName].fieldDescribe.isRequired"/>
+                        <input class="form-control" type="url" name="url" ng-model="attrCtrl.productAttributeValues[optionattr.fieldName]" ng-readonly="optionattr.isReadOnly" ng-required="optionattr.isRequired"/>
                     </div>
+
+                    <!-- fieldType: Email -->
                     <div class="col-sm-8" ng-switch-when="email" ng-class="{'has-error': innerForm.email.$invalid}">
-                        <input class="form-control" type="email" name="email" ng-value="attrCtrl.productAttributeValues[optionattr.fieldName]" ng-model="attrCtrl.productAttributeValues[optionattr.fieldName]" ng-readonly="optionattr.isReadOnly" ng-required="attrCtrl.pavfieldDescribeMap[optionattr.fieldName].fieldDescribe.isRequired"/>
+                        <input class="form-control" type="email" name="email" ng-model="attrCtrl.productAttributeValues[optionattr.fieldName]" ng-readonly="optionattr.isReadOnly" ng-required="optionattr.isRequired"/>
                     </div>
                     
                     <!-- fieldType: PICKLIST -->
-                    <div class="col-sm-8" ng-switch-when="picklist" ng-class="{'has-error': innerForm.picklist.$invalid}">
-                        <ui-select ng-required="attrCtrl.pavfieldDescribeMap[optionattr.fieldName].fieldDescribe.isRequired" on-select="attrCtrl.PAVPicklistChange(optionattr.fieldName)" ng-model="attrCtrl.productAttributeValues[optionattr.fieldName]" ng-readonly="optionattr.isReadOnly" theme="select2" append-to-body="true" style="width:100%">
-                            <ui-select-match placeholder="--None--" allow-clear="true">{{$select.selected.label}}</ui-select-match>
-                            <ui-select-choices repeat="entry.value as entry in optionattr.picklistValues | filter : $select.search">
-                                <div ng-bind-html="attrCtrl.trustAsHtml((entry.label | highlight: $select.search))"></div>
-                            </ui-select-choices>
-                        </ui-select>
-                        <input class="form-control" ng-show="attrCtrl.productAttributeValues[optionattr.fieldName] == 'Other'" type="text"  ng-model="attrCtrl.productAttributeValues[optionattr.fieldName+'Other']" ng-readonly="optionattr.isReadOnly" ng-required="attrCtrl.pavfieldDescribeMap[optionattr.fieldName].fieldDescribe.isRequired"/>
+                    <div class="col-sm-8" ng-switch-when="picklist">
+                        <div ng-class="{'has-error': innerForm.picklist.$invalid}">
+                            <ui-select name="picklist" ng-required="optionattr.isRequired" on-select="attrCtrl.PAVPicklistChange(optionattr.fieldName)" ng-model="attrCtrl.productAttributeValues[optionattr.fieldName]" ng-readonly="optionattr.isReadOnly" theme="select2" append-to-body="true" style="width:100%">
+                                <ui-select-match placeholder="--None--" allow-clear="true">{{$select.selected.label}}</ui-select-match>
+                                <ui-select-choices repeat="entry.value as entry in optionattr.picklistValues | filter : $select.search">
+                                    <div ng-bind-html="attrCtrl.trustAsHtml((entry.label | highlight: $select.search))"></div>
+                                </ui-select-choices>
+                            </ui-select>
+                        </div>
+
+                        <div ng-show="attrCtrl.productAttributeValues[optionattr.fieldName] == 'Other'" ng-class="{'has-error': innerForm.picklistOther.$invalid}">
+                            <input name="picklistOther" class="form-control" type="text"  ng-model="attrCtrl.productAttributeValues[optionattr.fieldName+'Other']" ng-readonly="optionattr.isReadOnly" ng-required="optionattr.isRequired"/>
+                        </div>
                     </div>
                 </div>
             </ng-form>

@@ -327,8 +327,8 @@ More info: https://docs.angularjs.org/api/ng/directive/ngCloak */
 .error .error__error-list {
     color: #939193;
     font-family: ProximaNovaSoft-Regular;
-    font-size: .9rem;
-    line-height: 1.2rem;
+    font-size: 1.1rem;
+    line-height: 1.6rem;
 }
 
 .error.error--critical, .form-element-container.form-element-container--error .multipick-item>label,
@@ -357,7 +357,7 @@ p.no-wrap {
     background: #F5EFED;
     border: 1px solid #C32F22;
     border-radius: 5px;
-    margin: .2rem 1rem .2rem 1rem;
+    //margin: .2rem 1rem .2rem 1rem;
     color: #333333;
 }
 
@@ -365,7 +365,7 @@ p.no-wrap {
     background: #FFF2DC;
     border: 1px solid #C32F22;
     border-radius: 5px;
-    margin: .2rem 1rem .2rem 1rem;
+    //margin: .2rem 1rem .2rem 1rem;
     color: #E29A0A;
 }
 
@@ -373,7 +373,7 @@ p.no-wrap {
     background: white;
     border: 1px solid #33AA33;
     border-radius: 5px;
-    margin: .2rem 1rem .2rem 1rem;
+    //margin: .2rem 1rem .2rem 1rem;
     color: #333333;
 }
 
@@ -790,4 +790,51 @@ button[disabled], button[disabled]:hover {
 
 button[disabled] {
     cursor: not-allowed
+}
+
+.pagination {
+    overflow: hidden;
+    //display: flex;
+    justify-content: flex-end;
+    white-space: nowrap;
+    margin: 0rem 0rem 1rem 0rem;
+}
+
+.pagination ul {
+    float: right;
+    margin: 1rem 0rem 1rem 0rem;
+}
+
+.pagination ul li {
+    display: inline-block;
+}
+
+.pagination ul li.disabled a {
+    color: #F0F1F2;
+}
+
+.pagination ul li.active a {
+    background-color: #F0F1F2;
+}
+
+.pagination ul li.numbers a:hover {
+    background-color: #FFF;
+    border: 1px solid #678;
+}
+
+.pagination ul li a {
+    color: #678;
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: .25rem .5rem;
+    border-radius: 3px;
+    border: 1px solid transparent;
+}
+
+.pagination__display-range {
+    color: #B4BCC4;
+    float: left;
+    margin: 1.25rem 0;
+    font-size: .9rem;
 }
